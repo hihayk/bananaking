@@ -1,0 +1,107 @@
+:root {
+	--unit: 8px;
+
+	--space-sm: 8px;
+  --space-md: calc(var(--space-sm) * 2);
+  --space-lg: calc(var(--space-sm) * 4);
+
+	--c-dark: #3A3A3A;
+	--c-light: #eee;
+
+	--fontsize-0: 16px;
+	--lineheight-0: 24px;
+
+	--fontsize-1: 24px;
+	--lineheight-1: 30px;
+
+	--typeFace: system-ui;
+
+  --spaceframe-textbox-md: var(--space-sm) calc(var(--space-sm) * 1.75);
+
+  --spaceframe-sm: var(--space-sm);
+  --spaceframe-md: var(--space-md);
+  --spaceframe-lg: var(--space-lg);
+
+  --borderColor: rgba(0,0,0,.2);
+
+  --border: 1px solid var(--borderColor);
+  
+  --width-sm: 128px;
+  --width-md: calc(var(--width-sm) * 2);
+  --width-lg: calc(var(--width-sm) * 4);
+}
+
+body {
+	margin: 64px;
+	font-family: var(--typeFace);
+	font-size: var(--fontsize-0);
+	line-height: var(--lineheight-0);
+	color: var(--c-dark);
+}
+
+.dst { 
+  display: flex;
+  align-items: flex-start;
+}
+
+.dst-space-1:not(.dst-vertical) > *:not(:last-child) { margin-right: 8px }
+.dst-space-2:not(.dst-vertical) > *:not(:last-child) { margin-right: 16px }
+.dst-space-3:not(.dst-vertical) > *:not(:last-child) { margin-right: 24px }
+.dst-space-4:not(.dst-vertical) > *:not(:last-child) { margin-right: 32px }
+.dst-space-5:not(.dst-vertical) > *:not(:last-child) { margin-right: 40px }
+.dst-space-6:not(.dst-vertical) > *:not(:last-child) { margin-right: 48px }
+.dst-space-7:not(.dst-vertical) > *:not(:last-child) { margin-right: 56px }
+.dst-space-8:not(.dst-vertical) > *:not(:last-child) { margin-right: 64px }
+
+.inputstring {
+	padding: var(--spaceframe-textbox-md);
+	font-size: var(--fontsize-0);
+	line-height: var(--lineheight-0);
+	font-family: var(--typeFace);
+}
+
+.button {
+	padding: var(--spaceframe-textbox-md);
+	font-size: var(--fontsize-0);
+	line-height: var(--lineheight-0);
+	background-color: #ddd;
+	display: inline-block;
+}
+
+.button-primary {
+	background-color: var(--c-dark);
+	color: var(--c-light);
+}
+
+.textSize-0 {
+	font-size: var(--fontsize-0);
+	line-height: var(--lineheight-0);
+}
+
+.textSize-1 {
+	font-size: var(--fontsize-1);
+	line-height: var(--lineheight-1);
+}
+
+.card {
+	padding: var(--spaceframe-lg);
+	border: var(--border);
+}
+
+.width-sm { width: var(--width-sm) }
+.width-md { width: var(--width-md) }
+.width-lg { width: var(--width-lg) }
+
+.spacer-t-sm { padding-top: var(--space-sm) }
+.spacer-t-md { padding-top: var(--space-md) }
+.spacer-t-lg { padding-top: var(--space-lg) }
+
+.demoBox {
+	background-color: var(--c-dark);
+	height: 16px;
+}
+
+.mainContainer {
+	display: flex;
+	justify-content: space-between;
+}
