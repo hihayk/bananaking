@@ -4,6 +4,7 @@
 	--space-sm: 8px;
   --space-md: calc(var(--space-sm) * 2);
   --space-lg: calc(var(--space-sm) * 4);
+  --space-xlg: calc(var(--space-sm) * 8);
 
 	--c-dark: #3A3A3A;
 	--c-light: #eee;
@@ -12,7 +13,10 @@
 	--lineheight-0: 24px;
 
 	--fontsize-1: 24px;
-	--lineheight-1: 30px;
+	--lineheight-1: 32px;
+
+	--fontsize-n1: 14px;
+	--lineheight-n1: 20px;
 
 	--typeFace: system-ui;
 
@@ -31,8 +35,12 @@
   --width-lg: calc(var(--width-sm) * 4);
 }
 
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
 body {
-	margin: 64px;
+	margin: var(--space-xlg);
 	font-family: var(--typeFace);
 	font-size: var(--fontsize-0);
 	line-height: var(--lineheight-0);
@@ -66,6 +74,10 @@ body {
 	line-height: var(--lineheight-0);
 	background-color: #ddd;
 	display: inline-block;
+	text-align: center;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
 }
 
 .button-primary {
@@ -81,6 +93,11 @@ body {
 .textSize-1 {
 	font-size: var(--fontsize-1);
 	line-height: var(--lineheight-1);
+}
+
+.textSize-n1 {
+	font-size: var(--fontsize-n1);
+	line-height: var(--lineheight-n1);
 }
 
 .card {
